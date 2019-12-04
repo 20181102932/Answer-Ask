@@ -23,6 +23,14 @@ class ViewController: UIViewController {
         {
             score1=score1+1
             score.text="得分：\(score1)"
+            let alert = UIAlertController(title:"提示", message:"答对了", preferredStyle:.alert)
+            present(alert,animated:true,completion:nil)
+            presentedViewController?.dismiss(animated: true, completion:nil)
+        }
+        else{
+            let alert1 = UIAlertController(title:"提示", message:"答错了", preferredStyle:.alert)
+            present(alert1,animated:true,completion:nil)
+            presentedViewController?.dismiss(animated: true, completion:nil)
         }
     }
     func next()
@@ -38,8 +46,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tishikuang(_ sender: UIButton) {
-        let alert = UIAlertController(title:"提示", message:"弹出了提示框", preferredStyle:.alert)
-        present(alert,animated:true,completion:nil)
+        let alert3 = UIAlertController(title:"提示", message:"提示框", preferredStyle:.alert)
+        present(alert3,animated:true,completion:nil)
         presentedViewController?.dismiss(animated: true, completion:nil)
     }
     @IBAction func yes(_ sender: UIButton) {
