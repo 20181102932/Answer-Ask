@@ -43,6 +43,7 @@ class ViewController: UIViewController {
         {
             index=0
             jdt.frame.size.width=0
+            score.text="总得分:0"
         }
         question.text=que[index]
         jindu.text="进度\(index+1)/3"
