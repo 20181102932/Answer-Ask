@@ -44,6 +44,7 @@ class ViewController: UIViewController {
             index=0
             jdt.frame.size.width=0
             score.text="总得分:0"
+            score1=0
         }
         question.text=que[index]
         jindu.text="进度\(index+1)/3"
@@ -52,7 +53,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tishikuang(_ sender: UIButton) {
-        let alert3 = UIAlertController(title:"提示", message:"提示框", preferredStyle:.alert)
+        let alert3 = UIAlertController(title:"提示", message:"是否提示", preferredStyle:.alert)
         alert3.addAction(UIAlertAction(title: "确定", style: UIAlertAction.Style.default, handler: {action in print("提示一次")}))
          alert3.addAction(UIAlertAction(title: "取消", style: UIAlertAction.Style.destructive, handler: {action in print("取消提示")}))
         present(alert3,animated:true,completion:nil)
